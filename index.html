@@ -7,24 +7,19 @@
 
   <title>LE VORA AI | Intelligent Growth for Med Spas</title>
 
-  <meta name="description" content="LE VORA AI helps med spas attract, qualify, follow up with, and book more clients using intelligent AI-powered systems.">
+  <meta name="description" content="LE VORA AI helps med spas attract, engage, qualify and book more clients using intelligent AI-powered systems.">
 
   <style>
-
-    /* =========================
-       LE VORA AI COLOR THEME
-       ========================= */
-
     :root {
       --ivory: #F8F7F3;
       --white: #FFFFFF;
       --charcoal: #242522;
-      --soft-charcoal: #555750;
+      --soft-charcoal: #5B5D56;
       --sage: #687463;
       --sage-dark: #4F5A4C;
       --champagne: #B7A27A;
       --champagne-light: #D8CCB4;
-      --border: #E6E3DA;
+      --border: #E4E1D8;
     }
 
     * {
@@ -38,7 +33,7 @@
     }
 
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: var(--ivory);
       color: var(--charcoal);
       line-height: 1.6;
@@ -49,21 +44,18 @@
       color: inherit;
     }
 
-    /* =========================
-       NAVIGATION
-       ========================= */
+    /* NAVIGATION */
 
     nav {
-      width: 100%;
-      padding: 22px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(248,247,243,0.95);
-      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      background: rgba(248, 247, 243, 0.96);
+      border-bottom: 1px solid var(--border);
       backdrop-filter: blur(10px);
     }
 
@@ -71,7 +63,7 @@
       font-family: Georgia, serif;
       font-size: 25px;
       letter-spacing: 2px;
-      font-weight: 600;
+      font-weight: bold;
     }
 
     .logo span {
@@ -80,14 +72,14 @@
 
     .nav-links {
       display: flex;
-      gap: 30px;
       align-items: center;
+      gap: 30px;
     }
 
     .nav-links a {
       font-size: 14px;
       color: var(--soft-charcoal);
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
 
     .nav-links a:hover {
@@ -95,9 +87,9 @@
     }
 
     .nav-button {
-      padding: 11px 20px;
       background: var(--charcoal);
       color: white !important;
+      padding: 11px 20px;
       border-radius: 4px;
     }
 
@@ -105,17 +97,19 @@
       background: var(--sage-dark);
     }
 
-    /* =========================
-       HERO
-       ========================= */
+    /* HERO */
 
     .hero {
       min-height: 88vh;
       display: flex;
       align-items: center;
-      padding: 90px 7%;
+      padding: 100px 7%;
       background:
-        radial-gradient(circle at 85% 20%, rgba(183,162,122,0.14), transparent 30%),
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(183, 162, 122, 0.16),
+          transparent 30%
+        ),
         var(--ivory);
     }
 
@@ -125,21 +119,21 @@
 
     .eyebrow {
       display: inline-block;
+      margin-bottom: 25px;
       color: var(--sage-dark);
       font-size: 13px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 25px;
-      font-weight: 600;
+      font-weight: bold;
     }
 
     .hero h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(48px, 7vw, 88px);
-      line-height: 1.02;
-      font-weight: 400;
       max-width: 900px;
       margin-bottom: 30px;
+      font-family: Georgia, serif;
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: normal;
+      line-height: 1.02;
     }
 
     .hero h1 span {
@@ -148,9 +142,9 @@
 
     .hero p {
       max-width: 650px;
+      margin-bottom: 40px;
       color: var(--soft-charcoal);
       font-size: 19px;
-      margin-bottom: 40px;
     }
 
     .hero-buttons {
@@ -159,14 +153,18 @@
       flex-wrap: wrap;
     }
 
-    .primary-button {
+    .primary-button,
+    .secondary-button {
       display: inline-block;
-      background: var(--charcoal);
-      color: white;
       padding: 15px 28px;
       border-radius: 4px;
       font-size: 14px;
-      transition: 0.3s;
+      transition: 0.3s ease;
+    }
+
+    .primary-button {
+      background: var(--charcoal);
+      color: white;
     }
 
     .primary-button:hover {
@@ -175,12 +173,7 @@
     }
 
     .secondary-button {
-      display: inline-block;
       border: 1px solid var(--charcoal);
-      padding: 14px 28px;
-      border-radius: 4px;
-      font-size: 14px;
-      transition: 0.3s;
     }
 
     .secondary-button:hover {
@@ -188,32 +181,30 @@
       color: white;
     }
 
-    /* =========================
-       INTRO
-       ========================= */
+    /* INTRO */
 
     .intro {
+      padding: 110px 7%;
       background: var(--white);
-      padding: 100px 7%;
       text-align: center;
     }
 
     .section-label {
-      color: var(--champagne);
-      letter-spacing: 3px;
-      font-size: 12px;
-      text-transform: uppercase;
-      font-weight: 600;
       margin-bottom: 18px;
+      color: var(--champagne);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: bold;
     }
 
     .intro h2,
     .section-header h2 {
+      margin-bottom: 22px;
       font-family: Georgia, serif;
       font-size: clamp(36px, 5vw, 58px);
-      font-weight: 400;
+      font-weight: normal;
       line-height: 1.15;
-      margin-bottom: 22px;
     }
 
     .intro p {
@@ -223,9 +214,7 @@
       font-size: 17px;
     }
 
-    /* =========================
-       SERVICES
-       ========================= */
+    /* SERVICES */
 
     .services {
       padding: 110px 7%;
@@ -249,30 +238,30 @@
     }
 
     .service-card {
-      background: var(--white);
       padding: 38px;
+      background: var(--white);
       border: 1px solid var(--border);
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
 
     .service-card:hover {
       transform: translateY(-5px);
       border-color: var(--champagne-light);
-      box-shadow: 0 15px 35px rgba(36,37,34,0.06);
+      box-shadow: 0 15px 35px rgba(36, 37, 34, 0.06);
     }
 
     .service-number {
+      margin-bottom: 25px;
       color: var(--champagne);
       font-family: Georgia, serif;
       font-size: 24px;
-      margin-bottom: 25px;
     }
 
     .service-card h3 {
+      margin-bottom: 15px;
       font-family: Georgia, serif;
       font-size: 24px;
-      font-weight: 400;
-      margin-bottom: 15px;
+      font-weight: normal;
     }
 
     .service-card p {
@@ -280,9 +269,7 @@
       font-size: 15px;
     }
 
-    /* =========================
-       AI SECTION
-       ========================= */
+    /* AI SECTION */
 
     .ai-section {
       padding: 120px 7%;
@@ -304,23 +291,23 @@
     }
 
     .ai-section h2 {
-      font-family: Georgia, serif;
-      font-weight: 400;
-      font-size: clamp(38px, 5vw, 60px);
-      line-height: 1.1;
       margin-bottom: 25px;
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 5vw, 60px);
+      font-weight: normal;
+      line-height: 1.1;
     }
 
     .ai-section p {
+      margin-bottom: 25px;
       color: #C9CBC5;
       font-size: 17px;
-      margin-bottom: 25px;
     }
 
     .ai-box {
-      border: 1px solid #555950;
       padding: 40px;
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid #555950;
     }
 
     .ai-step {
@@ -349,9 +336,7 @@
       font-size: 14px;
     }
 
-    /* =========================
-       PROCESS
-       ========================= */
+    /* PROCESS */
 
     .process {
       padding: 110px 7%;
@@ -366,8 +351,8 @@
     }
 
     .process-card {
-      border-top: 1px solid var(--champagne);
       padding-top: 25px;
+      border-top: 1px solid var(--champagne);
     }
 
     .process-card span {
@@ -379,8 +364,8 @@
     .process-card h3 {
       margin: 15px 0 10px;
       font-family: Georgia, serif;
-      font-weight: 400;
       font-size: 22px;
+      font-weight: normal;
     }
 
     .process-card p {
@@ -388,41 +373,41 @@
       font-size: 14px;
     }
 
-    /* =========================
-       CTA
-       ========================= */
+    /* CTA */
 
     .cta {
       padding: 120px 7%;
-      text-align: center;
       background:
-        radial-gradient(circle at 50% 0%, rgba(183,162,122,0.2), transparent 35%),
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(183, 162, 122, 0.20),
+          transparent 35%
+        ),
         var(--ivory);
+      text-align: center;
     }
 
     .cta h2 {
-      font-family: Georgia, serif;
-      font-size: clamp(40px, 6vw, 68px);
-      font-weight: 400;
-      line-height: 1.1;
       max-width: 800px;
       margin: auto auto 25px;
+      font-family: Georgia, serif;
+      font-size: clamp(40px, 6vw, 68px);
+      font-weight: normal;
+      line-height: 1.1;
     }
 
     .cta p {
-      color: var(--soft-charcoal);
       max-width: 600px;
       margin: 0 auto 35px;
+      color: var(--soft-charcoal);
     }
 
-    /* =========================
-       FOOTER
-       ========================= */
+    /* FOOTER */
 
     footer {
+      padding: 55px 7%;
       background: var(--charcoal);
       color: white;
-      padding: 55px 7%;
     }
 
     .footer-content {
@@ -430,10 +415,6 @@
       justify-content: space-between;
       gap: 30px;
       flex-wrap: wrap;
-    }
-
-    footer .logo {
-      margin-bottom: 10px;
     }
 
     footer p {
@@ -446,20 +427,18 @@
     }
 
     .footer-right a {
-      color: #D8CCB4;
+      color: var(--champagne-light);
     }
 
     .copyright {
-      border-top: 1px solid #44473F;
       margin-top: 40px;
       padding-top: 25px;
+      border-top: 1px solid #44473F;
       color: #92958E;
       font-size: 12px;
     }
 
-    /* =========================
-       MOBILE
-       ========================= */
+    /* MOBILE */
 
     @media (max-width: 800px) {
 
@@ -472,8 +451,8 @@
       }
 
       .hero {
-        padding: 80px 6%;
         min-height: 80vh;
+        padding: 80px 6%;
       }
 
       .hero h1 {
@@ -509,7 +488,6 @@
         text-align: left;
       }
     }
-
   </style>
 </head>
 
@@ -549,9 +527,9 @@
       </h1>
 
       <p>
-        LE VORA AI builds intelligent client acquisition and
-        appointment systems designed specifically for modern
-        med spas and aesthetic clinics.
+        LE VORA AI builds intelligent client acquisition
+        and appointment systems designed specifically
+        for modern med spas and aesthetic clinics.
       </p>
 
       <div class="hero-buttons">
@@ -586,9 +564,9 @@
 
     <p>
       From the first click to the booked appointment,
-      LE VORA AI connects advertising, intelligent conversations,
-      follow-up automation and CRM systems into one streamlined
-      client acquisition process.
+      LE VORA AI connects advertising, intelligent
+      conversations, follow-up automation and CRM
+      systems into one streamlined client acquisition process.
     </p>
 
   </section>
@@ -615,93 +593,61 @@
 
     </div>
 
-
     <div class="service-grid">
 
       <div class="service-card">
-
         <div class="service-number">01</div>
-
         <h3>Meta Ads</h3>
-
         <p>
           Strategic Facebook and Instagram advertising
-          designed to generate qualified leads for your
-          med spa.
+          designed to generate qualified leads for your med spa.
         </p>
-
       </div>
 
-
       <div class="service-card">
-
         <div class="service-number">02</div>
-
         <h3>AI Appointment Agent</h3>
-
         <p>
           An intelligent AI assistant that responds to
           leads, answers questions, qualifies prospects
           and helps book appointments.
         </p>
-
       </div>
 
-
       <div class="service-card">
-
         <div class="service-number">03</div>
-
         <h3>Automated Follow-Up</h3>
-
         <p>
           Automated SMS and email follow-ups that help
-          prevent interested prospects from slipping
-          through the cracks.
+          prevent interested prospects from slipping through the cracks.
         </p>
-
       </div>
 
-
       <div class="service-card">
-
         <div class="service-number">04</div>
-
         <h3>Landing Pages</h3>
-
         <p>
           Conversion-focused landing pages designed to
           turn advertising traffic into real leads.
         </p>
-
       </div>
 
-
       <div class="service-card">
-
         <div class="service-number">05</div>
-
         <h3>CRM & Automation</h3>
-
         <p>
           Organized lead tracking, pipelines and automated
           workflows to keep your sales process moving.
         </p>
-
       </div>
 
-
       <div class="service-card">
-
         <div class="service-number">06</div>
-
         <h3>Review System</h3>
-
         <p>
           Automated review requests designed to help
           satisfied clients share their experience.
         </p>
-
       </div>
 
     </div>
@@ -709,7 +655,7 @@
   </section>
 
 
-  <!-- AI SECTION -->
+  <!-- AI APPOINTMENT AGENT -->
 
   <section class="ai-section" id="ai">
 
@@ -740,62 +686,38 @@
 
       </div>
 
-
       <div class="ai-box">
 
         <div class="ai-step">
-
           <div class="ai-step-number">01</div>
-
           <div>
             <strong>Lead arrives</strong>
-            <span>
-              A potential client submits an inquiry.
-            </span>
+            <span>A potential client submits an inquiry.</span>
           </div>
-
         </div>
 
-
         <div class="ai-step">
-
           <div class="ai-step-number">02</div>
-
           <div>
             <strong>AI responds</strong>
-            <span>
-              The AI engages the prospect quickly.
-            </span>
+            <span>The AI engages the prospect quickly.</span>
           </div>
-
         </div>
 
-
         <div class="ai-step">
-
           <div class="ai-step-number">03</div>
-
           <div>
             <strong>Lead is qualified</strong>
-            <span>
-              The conversation identifies intent and needs.
-            </span>
+            <span>The conversation identifies intent and needs.</span>
           </div>
-
         </div>
 
-
         <div class="ai-step">
-
           <div class="ai-step-number">04</div>
-
           <div>
             <strong>Appointment booked</strong>
-            <span>
-              Qualified prospects are guided toward booking.
-            </span>
+            <span>Qualified prospects are guided toward booking.</span>
           </div>
-
         </div>
 
       </div>
@@ -821,62 +743,42 @@
 
     </div>
 
-
     <div class="process-grid">
 
       <div class="process-card">
-
         <span>01</span>
-
         <h3>Attract</h3>
-
         <p>
           Reach potential clients through strategic
           advertising and compelling offers.
         </p>
-
       </div>
 
-
       <div class="process-card">
-
         <span>02</span>
-
         <h3>Engage</h3>
-
         <p>
           Respond to new leads with intelligent
           conversations and instant follow-up.
         </p>
-
       </div>
 
-
       <div class="process-card">
-
         <span>03</span>
-
         <h3>Qualify</h3>
-
         <p>
           Identify serious prospects and understand
           what they're looking for.
         </p>
-
       </div>
 
-
       <div class="process-card">
-
         <span>04</span>
-
         <h3>Book</h3>
-
         <p>
           Move qualified prospects toward their next
           appointment with your business.
         </p>
-
       </div>
 
     </div>
@@ -902,10 +804,7 @@
       create a more efficient path from lead to appointment.
     </p>
 
-    <a
-      href="mailto:levoraai01@gmail.com"
-      class="primary-button"
-    >
+    <a href="mailto:levoraai01@gmail.com" class="primary-button">
       Contact LE VORA AI
     </a>
 
@@ -930,12 +829,9 @@
 
       </div>
 
-
       <div class="footer-right">
 
-        <p>
-          Email
-        </p>
+        <p>Email</p>
 
         <a href="mailto:levoraai01@gmail.com">
           levoraai01@gmail.com
@@ -945,11 +841,8 @@
 
     </div>
 
-
     <div class="copyright">
-
       © 2026 LE VORA AI. All rights reserved.
-
     </div>
 
   </footer>
